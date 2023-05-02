@@ -436,7 +436,7 @@ section[section="testimonial"]{
                 li{
                     margin-right: 10px;
                     button{
-                        text-indent: -1000px;
+                        text-indent: -10000px;
                         border-radius: 100%;
                         border: 1px solid #D9D9D9;
                         width: 18px;
@@ -489,11 +489,12 @@ footer{
                     .c-wrapper{
                         display: flex;
                         gap: px2vw(25);
+                        align-items: center;
                     }
 
                     a{
                         color: #F2F2F2;
-                        font-size: 18px;
+                        font-size: px2vw(18);
                         font-weight: $regular;
                         &:hover{
                             color: $blue-light;
@@ -529,7 +530,7 @@ footer{
 
         .footer-links{
             display: flex;
-            width: px2vw(587);
+           
             gap: px2vw(160);
             ul{
               
