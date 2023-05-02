@@ -220,7 +220,7 @@ border-radius: 100%;
                 position: relative;
                 z-index: 999;
                 padding: px2vw(55);
-                font-size:24px;
+                font-size:px2vw(24);
                 font-weight: $semiBold;
                 color: $black;
 
@@ -234,12 +234,12 @@ border-radius: 100%;
 
 .grid-content{
     .icon{
-        width: 84px;
-        height: 84px;
+        width: px2vw(84);
+        height: px2vw(84);
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 15px;
+        border-radius: px2vw(15);
         margin-bottom: px2vw(20);
     }
 
@@ -266,7 +266,7 @@ border-radius: 100%;
 section[section="why-choose-us"]{
     p{
         color: #5A5959;
-        font-size: 18px;
+        font-size: px2vw(18);
         font-weight: $regular;
         margin: px2vw(40) 0;
     }
@@ -294,15 +294,15 @@ section[section="why-choose-us"]{
             align-items: flex-start;
             gap: px2vw(30);
             h3{
-                font-size: 24px;
+                font-size: px2vw(24);
                 font-weight: $extraBold;
                 color: #6A6868;
-                line-height: 25px;
+                line-height: px2vw(25);
                 
             }
             p{
-                font-size: 18px;
-                line-height: 28px;
+                font-size: px2vw(18);
+                line-height: px2vw(28);
                 color: #646161;
                 margin:px2vw(20) 0 px2vw(55) 0;
             }
@@ -387,7 +387,7 @@ section[section="testimonial"]{
                         width:0;
                         height:0;
                  
-                        margin: 20px;
+                        margin: px2vw(20);
                         display: inline-block;
                         border-top: px2vw(103) solid #fff;
                         border-left: 0px solid transparent;
@@ -397,8 +397,8 @@ section[section="testimonial"]{
                     }
                     p{
                         color: #5A5656;
-                        font-size: 18px;
-                        line-height: 35px;
+                        font-size: px2vw(18);
+                        line-height: px2vw(35);
                     }
                     .rating{
                         margin-top: px2vw(25);
@@ -416,15 +416,15 @@ section[section="testimonial"]{
                     align-items: center;
                     gap: px2vw(25);
                     .name{
-                        font-size: 20px;
-                        line-height: 35px;
+                        font-size: px2vw(20);
+                        line-height: px2vw(35);
                         font-weight: $semiBold;
                         color: #5A5656;
                     }
                     .designation{
                         color: #5A5656;
-                        font-size: 18px;
-                        line-height: 35px;
+                        font-size: px2vw(18);
+                        line-height: px2vw(35);
                         font-weight: $regular;
                     }
                 }
@@ -434,13 +434,13 @@ section[section="testimonial"]{
                 margin-left: px2vw(36);
                 margin-top: px2vw(35);
                 li{
-                    margin-right: 10px;
+                    margin-right: px2vw(10);
                     button{
                         text-indent: -10000px;
                         border-radius: 100%;
                         border: 1px solid #D9D9D9;
-                        width: 18px;
-                        height: 18px;
+                        width: px2vw(18);
+                        height: px2vw(18);
                         background: #FFFFFF;
                     }
                     &.slick-active{
@@ -449,11 +449,11 @@ section[section="testimonial"]{
                             &::before{
                                 position: absolute;
                                 content: '';
-                                width: 12px;
-                                height: 12px;
+                                width: px2vw(12);
+                                height: px2vw(12);
                                 background: #197BFF;
-                                left: 2.5px;
-                                top: 1.5px;
+                                left: px2vw(2.5);
+                                top: px2vw(1.5);
                                 border-radius: 100%;
                             }
                         }
@@ -503,7 +503,7 @@ footer{
                 }
                 .social-links{
                     display: flex;
-                    gap: 15px;
+                    gap: px2vw(15);
                     a{
                         &:hover{
                             img{
@@ -518,11 +518,11 @@ footer{
     
             }
             p{
-                font-size: 18px;
+                font-size: px2vw(18);
                 color: #F2F2F2;
                 font-weight: $regular;
                 margin-top: px2vw(50);
-                line-height: 35px;
+                line-height: px2vw(35);
                 margin-bottom: px2vw(100);
                 
             }
@@ -536,7 +536,7 @@ footer{
               
                 li:nth-child(1){
                     a{
-                        font-size: 24px;
+                        font-size: px2vw(24);
                         font-weight: $bold;
                         color: #F2F2F2;
                         pointer-events: none;
@@ -546,7 +546,7 @@ footer{
 
                 li{
                     a{
-                        font-size: 18px;
+                        font-size: px2vw(18);
                         font-weight: $regular;
                         color: #F2F2F2;
                         display: inline-block;
@@ -569,7 +569,7 @@ footer{
 .copyright{
     background: $blue-light;
     color: #F2F2F2;
-    padding: 25px 0;
+    padding: px2vw(25) 0;
     .container{
         padding: 0;
     }
