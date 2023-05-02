@@ -290,6 +290,8 @@ border-radius: 100%;
         @include mobile(){
             font-size: px2vw(18,414);
             line-height: 5.270833vw;
+            position: relative;
+            z-index: 99;
         }
     }
 }
@@ -744,18 +746,29 @@ footer{
                         font-size: px2vw(18);
                         @include mobile(){
                             font-size: px2vw(12,414);
+                            margin-bottom: 0;
                         }
                     }
                     .c-wrapper{
                         display: flex;
                         gap: px2vw(25);
                         align-items: center;
+                        @include mobile(){
+                            margin-left: px2vw(10,414);
+                        }
                         .phone-img{
                             width: px2vw(28);
+                            @include mobile(){
+                                width: px2vw(16,414);
+                               
+                            }
                         }
 
                         .mail-img{
                             width: px2vw(33);
+                            @include mobile(){
+                                width: px2vw(16,414);
+                            }
                         }
                     }
 
@@ -766,11 +779,27 @@ footer{
                         &:hover{
                             color: $blue-light;
                         }
+                        @include mobile(){
+                            font-size: px2vw(12,414);
+                        }
                     }
+
+                    &:nth-child(3){
+                        @include mobile(){
+                            margin-bottom: px2vw(15,414);
+                        }
+                    }
+
+                   
                 }
                 .social-links{
                     display: flex;
                     gap: px2vw(15);
+                    @include mobile(){
+                        gap:px2vw(10,414);
+                        margin-left: px2vw(10,414);
+                        
+                    }
                     a{
                         &:hover{
                             img{
@@ -782,15 +811,27 @@ footer{
                     li{
                         &:nth-child(1) img{
                             width: px2vw(31);
+                            @include mobile(){
+                                width: px2vw(16,414);
+                            }
                         }
                         &:nth-child(2) img{
                             width: px2vw(28);
+                            @include mobile(){
+                                width: px2vw(16,414);
+                            }
                         }
                         &:nth-child(3) img{
                             width: px2vw(15);
+                            @include mobile(){
+                                width: px2vw(8,414);
+                            }
                         }
                         &:nth-child(4) img{
                             width: px2vw(28);
+                            @include mobile(){
+                                width: px2vw(16,414);
+                            }
                         }
                     }
                 }
