@@ -66,7 +66,22 @@ header {
             
         }
 
-        
+        .navigation-wrapper{
+            @include mobile(){
+                display: none;
+                position: absolute;
+                width: 100%;
+                height: calc(100vh - 50px);
+                background: $blue;
+                top: 50px;
+                left: -100%;
+                transition: 0.5s;
+            }
+            &.active{
+                left: 0;
+                display: block !important;
+            }
+        }
 
         ul[role="navigation"] {
 
@@ -75,9 +90,7 @@ header {
 
            
 
-            @include mobile(){
-                display: none;
-            }
+            
 
             a {
                 color: $white;
@@ -88,6 +101,8 @@ header {
                     color: $blue;
                 }
             }
+
+           
 
         }
     }

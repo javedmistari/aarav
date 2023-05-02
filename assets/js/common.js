@@ -11,10 +11,12 @@
         dots: true,
       });
 
-      $('.menu-icon').click(function (e) { 
-        e.preventDefault();
-        $('ul[role="navigation"]').toggle();
-      });
+    
+
+      $('.menu-icon').click(function(){
+        $('.navigation-wrapper').toggleClass('active');
+        
+      })
 
       
 }.call(window, window.jQuery);
