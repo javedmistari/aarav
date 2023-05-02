@@ -49,6 +49,10 @@ header {
         }
 
         .logo {
+            @include mobile(){
+                position: relative;
+                z-index: 9999;
+            }
             img {
                 max-width: px2vw(376);
                 @include mobile(){
@@ -62,24 +66,39 @@ header {
             @include mobile(){
                 width: px2vw(38,414);
                 display: block;
+                position: relative;
+                z-index: 9999;
             }
             
         }
 
         .navigation-wrapper{
             @include mobile(){
-                display: none;
+                display: block;
                 position: absolute;
                 width: 100%;
                 height: calc(100vh - 50px);
-                background: $blue;
-                top: 50px;
+                background: #273238;
+                top: 0;
                 left: -100%;
+                padding-top: 50px;
                 transition: 0.5s;
+                z-index: 999;
             }
             &.active{
                 left: 0;
-                display: block !important;
+          
+
+                ul[role="navigation"]{
+
+                    li{
+                        padding-bottom: px2vw(8,414);
+                        border-bottom: 1px solid #222b2f;
+                    }
+                    a{
+                        color: $white;
+                    }
+                }
             }
         }
 
@@ -87,6 +106,12 @@ header {
 
             display: flex;
             gap: px2vw(75);
+            @include mobile(){
+                flex-direction: column;
+                padding-top: px2vw(80,414);
+                justify-content: center;
+              padding-left: px2vw(25,414);
+            }
 
            
 
@@ -422,11 +447,19 @@ section[section="why-choose-us"]{
         margin-top: px2vw(55);
         @include mobile(){
             width: 100%;
+            margin-top: 6.864583vw;
         }
         li{
             display: flex;
             align-items: flex-start;
             gap: px2vw(30);
+            @include mobile(){
+                gap: 3.5625vw;
+                 img{
+                    width: px2vw(40,414) !important;
+                }
+               
+            }
             h3{
                 font-size: px2vw(24);
                 font-weight: $extraBold;
@@ -444,8 +477,12 @@ section[section="why-choose-us"]{
                 margin:px2vw(20) 0 px2vw(55) 0;
                 @include mobile(){
                     font-size: px2vw(14,414);
+                    line-height: 4.458333vw;
+                    margin: 3.041667vw 0 6.864583vw 0;
                 }
             }
+
+
 
             &:nth-child(1) img{
                 width: px2vw(75);
@@ -456,7 +493,8 @@ section[section="why-choose-us"]{
             &:nth-child(3) img{
                 width: px2vw(80);
             }
-           
+
+            
         }
     }
 }
@@ -515,9 +553,17 @@ section[section="testimonial"]{
     .testimonial-wrapper{
         display: flex;
         gap: px2vw(185);
+        @include mobile(){
+            flex-direction: column;
+            gap: 4.635417vw;
+        }
         .slider{
             max-width: px2vw(728.5);
             margin-top: px2vw(35);
+
+            @include mobile(){
+                max-width: 100%;
+            }
 
 
             .testimonials{
@@ -529,6 +575,9 @@ section[section="testimonial"]{
                     border-radius: px2vw(30);
                     margin:px2vw(35)  px2vw(35) 0;
                     position: relative;
+                    @include mobile(){
+                        border-radius: 4.5625vw;
+                    }
 
                     &::after{
                         content: '';
@@ -543,18 +592,35 @@ section[section="testimonial"]{
                         border-left: 0px solid transparent;
                         border-right: px2vw(109) solid transparent;
                         left: px2vw(-20);
+                        @include mobile(){
+                                border-top: 10.364583vw solid #fff;
+    border-left: 0px solid transparent;
+    border-right: 10.677083vw solid transparent;
+    left: -3px;
+    margin-top: -2px;
+                        }
 
                     }
                     p{
                         color: #5A5656;
                         font-size: px2vw(18);
                         line-height: px2vw(35);
+
+                        @include mobile(){
+                            font-size: px2vw(14,414);
+                            line-height: 4.822917vw;
+                        }
                     }
                     .rating{
                         margin-top: px2vw(25);
                         ul{
                             display: flex;
                             gap: 1px;
+                            @include mobile(){
+                                img{
+                                    width: px2vw(20,414);
+                                }
+                            }
                         }
                     }
                 }
@@ -565,17 +631,35 @@ section[section="testimonial"]{
                     margin-left: px2vw(98);
                     align-items: center;
                     gap: px2vw(25);
+                    @include mobile(){
+                        margin-left: 8.104167vw;
+                        margin-top: 2.302083vw;
+                    }
                     .name{
                         font-size: px2vw(20);
                         line-height: px2vw(35);
                         font-weight: $semiBold;
                         color: #5A5656;
+                        @include mobile(){
+                            font-size: px2vw(16,414);
+                            line-height: 4.822917vw;
+                        }
                     }
                     .designation{
                         color: #5A5656;
                         font-size: px2vw(18);
                         line-height: px2vw(35);
                         font-weight: $regular;
+                        @include mobile(){
+                            font-size: px2vw(14,414);
+                            line-height: 4.822917vw;
+                        }
+                    }
+
+                    img{
+                        @include mobile(){
+                            width: px2vw(50,414);
+                        }
                     }
                 }
             }
@@ -592,6 +676,10 @@ section[section="testimonial"]{
                         width: px2vw(18);
                         height: px2vw(18);
                         background: #FFFFFF;
+                        @include mobile(){
+                            width: px2vw(18,414);
+                        height: px2vw(18,414);
+                        }
                     }
                     &.slick-active{
                         button{
@@ -605,6 +693,12 @@ section[section="testimonial"]{
                                 left: px2vw(2.5);
                                 top: px2vw(1.5);
                                 border-radius: 100%;
+                                @include mobile(){
+                                    width: px2vw(12,414);
+                                    height: px2vw(12,414);
+                                    left: px2vw(2,414);
+                                    top: px2vw(2,414);
+                                }
                             }
                         }
                     }
@@ -624,18 +718,33 @@ footer{
 
         display: flex;
         justify-content: space-between;
+        @include mobile(){
+            flex-direction: column;
+        }
      
         .about-section{
 
             width: 51%;
+            @include mobile(){
+                width: 100%;
+            }
             ul.c-main-wrapper{
                 display: flex;
                 gap: px2vw(55);
+                @include mobile(){
+                    flex-direction: column;
+                }
                 li{
+                    @include mobile(){
+                        display: flex;
+                    }
                     .c-heading{
                         margin-bottom: 10px;
                         color: #F2F2F2;
                         font-size: px2vw(18);
+                        @include mobile(){
+                            font-size: px2vw(12,414);
+                        }
                     }
                     .c-wrapper{
                         display: flex;
@@ -688,6 +797,9 @@ footer{
             }
             .logo{
                 width: px2vw(277);
+                @include mobile(){
+                    width: px2vw(180,414);
+                }
     
             }
             p{
@@ -697,6 +809,11 @@ footer{
                 margin-top: px2vw(50);
                 line-height: px2vw(35);
                 margin-bottom: px2vw(100);
+                @include mobile(){
+                    font-size: px2vw(14,414);
+                    line-height: 4.822917vw;
+                }
+                
                 
             }
         }
@@ -705,6 +822,10 @@ footer{
             display: flex;
            
             gap: px2vw(160);
+            @include mobile(){
+                width: 100%;
+                justify-content: space-between;
+            }
             ul{
               
                 li:nth-child(1){
@@ -713,6 +834,9 @@ footer{
                         font-weight: $bold;
                         color: #F2F2F2;
                         pointer-events: none;
+                        @include mobile(){
+                            font-size: px2vw(16,414);
+                        }
 
                     }
                 }
@@ -723,6 +847,9 @@ footer{
                         font-weight: $regular;
                         color: #F2F2F2;
                         display: inline-block;
+                        @include mobile(){
+                            font-size: px2vw(12,414);
+                        }
                         &:hover{
                             color: $blue-light;
                         }
@@ -745,5 +872,11 @@ footer{
     padding: px2vw(25) 0;
     .container{
         padding: 0;
+        @include mobile(){
+            font-size:px2vw(12,414);
+            padding: px2vw(25) 0;
+        }
+           
+        
     }
 }
