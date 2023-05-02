@@ -146,7 +146,7 @@ section[section="banner"] {
     background-size: 100% 100%;
 
     @include mobile(){
-        
+        height: 100%;
     }
 
     @include mobile(){
@@ -164,8 +164,10 @@ section[section="banner"] {
             margin: 0 auto;
            
             position: relative;
-            top: 10%;
+         
+            top: auto; 
             left: auto;
+            padding-top: 10% !important;
         }
     }
 
@@ -181,8 +183,8 @@ section[section="banner"] {
             top: auto;
             left: auto;
             transform: none;
-            padding: px2vw(25,414);
-            margin-top: 25%;
+            padding: 9.038647vw 6.038647vw;
+        
         }
 
         h1 {
