@@ -21,8 +21,8 @@ html {
 
     @include max_breakpoint(540px) {
         max-width: 100%;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: px2vw(25,414) !important;
+        padding-right: px2vw(25,414) !important;
 
     }
 }
@@ -44,9 +44,16 @@ header {
         align-items: center;
         margin-top: px2vw(50);
 
+        @include mobile(){
+            margin-top: px2vw(20,414);
+        }
+
         .logo {
             img {
                 max-width: px2vw(376);
+                @include mobile(){
+                    max-width: px2vw(215,414);
+                }
             }
         }
 
@@ -54,6 +61,10 @@ header {
 
             display: flex;
             gap: px2vw(75);
+
+            @include mobile(){
+                display: none;
+            }
 
             a {
                 color: $white;
@@ -81,11 +92,28 @@ section[section="banner"] {
     width: 100%;
     background-size: 100% 100%;
 
+    @include mobile(){
+        height: 84vh;
+    }
+
+    @include mobile(){
+        background-image: url('../img/banner-mobile.png');
+    }
+
     .vert-move {
         position: absolute;
         top: 35%;
         left: 8%;
         width: px2vw(458);
+
+        @include mobile(){
+            width: 60%;
+            margin: 0 auto;
+           
+            position: relative;
+            top: 10%;
+            left: auto;
+        }
     }
 
 
@@ -95,11 +123,25 @@ section[section="banner"] {
         left: 44%;
         transform: translate(0, -50%);
 
+        @include mobile(){
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            padding: px2vw(25,414);
+            margin-top: 20%;
+        }
+
         h1 {
             font-size: px2vw(83);
             font-weight: $bold;
             color: $white;
             line-height: px2vw(105);
+            @include mobile(){
+                font-size: 7.322917vw;
+                line-height: 9.46875vw;
+
+            }
         }
 
         p {
@@ -110,6 +152,14 @@ section[section="banner"] {
             font-weight: $regular;
             margin-bottom: px2vw(25);
             margin-top: px2vw(40);
+
+            @include mobile(){
+                font-size: px2vw(16,414);
+                line-height: 1.5;
+                margin-top: 4.5vw;
+                margin-bottom: 4.5vw;
+                max-width: 100%;
+            }
         }
 
         .cta {
@@ -126,6 +176,16 @@ section[section="banner"] {
             justify-content: center;
             align-items: center;
             color: $white;
+
+            @include mobile(){
+                font-size: px2vw(14,414);
+                
+                width: 35.927083vw;
+                height: 10.645833vw;
+            
+              
+                border-radius: 10.645833vw;
+            }
 
             &:hover {
                 background: $white;
@@ -164,6 +224,9 @@ border-radius: 100%;
         color: $light-300;
         font-size: px2vw(24);
         font-weight: $medium;
+        @include mobile(){
+            font-size: px2vw(14,414);
+        }
     }
 
     .heading {
@@ -171,6 +234,10 @@ border-radius: 100%;
         font-size: px2vw(56);
         font-weight: $extraBold;
         line-height: px2vw(82);
+        @include mobile(){
+            font-size: px2vw(18,414);
+            line-height: 5.270833vw;
+        }
     }
 }
 
@@ -224,6 +291,20 @@ border-radius: 100%;
                 font-weight: $semiBold;
                 color: $black;
 
+                @include mobile(){
+                    width: 43.34375vw;
+    height: 20.5vw;
+
+    box-shadow: 0px 0px 0.78125vw rgba(191,188,188,0.160784);
+    border: 1px solid #EFEFEF;
+
+    border-radius: 2.041667vw;
+
+    padding: 2.86458333333vw;
+    font-size: 2.9vw;
+
+                }
+
 
 
             }
@@ -242,6 +323,15 @@ border-radius: 100%;
         border-radius: px2vw(15);
         margin-bottom: px2vw(20);
         padding: px2vw(15);
+
+        @include mobile(){
+            width: 9.375vw;
+    height: 8.375vw;
+
+    border-radius: 1.78125vw;
+    margin-bottom: 2.041667vw;
+    padding: 1.78125vw;
+        }
     }
 
    .icon-1{
@@ -306,6 +396,16 @@ section[section="why-choose-us"]{
                 line-height: px2vw(28);
                 color: #646161;
                 margin:px2vw(20) 0 px2vw(55) 0;
+            }
+
+            &:nth-child(1) img{
+                width: px2vw(75);
+            }
+            &:nth-child(2) img{
+                width: px2vw(75);
+            }
+            &:nth-child(3) img{
+                width: px2vw(80);
             }
            
         }
@@ -486,6 +586,7 @@ footer{
                     .c-heading{
                         margin-bottom: 10px;
                         color: #F2F2F2;
+                        font-size: px2vw(18);
                     }
                     .c-wrapper{
                         display: flex;
