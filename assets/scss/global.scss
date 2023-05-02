@@ -57,10 +57,23 @@ header {
             }
         }
 
+        .menu-icon{
+            display: none;
+            @include mobile(){
+                width: px2vw(38,414);
+                display: block;
+            }
+            
+        }
+
+        
+
         ul[role="navigation"] {
 
             display: flex;
             gap: px2vw(75);
+
+           
 
             @include mobile(){
                 display: none;

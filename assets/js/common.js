@@ -9,11 +9,12 @@
         infinite: true,
         arrows: false,
         dots: true,
-
-    
-  
-        
-      
-      
       });
+
+      $('.menu-icon').click(function (e) { 
+        e.preventDefault();
+        $('ul[role="navigation"]').toggle();
+      });
+
+      
 }.call(window, window.jQuery);
