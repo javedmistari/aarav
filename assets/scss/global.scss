@@ -125,6 +125,7 @@ header {
 
                 &:hover {
                     color: $blue;
+                   
                 }
             }
 
@@ -137,7 +138,94 @@ header {
 }
 
 
+.dropbtn {
 
+    color: white;
+    padding: px2vw(16);
+
+    border: none;
+  }
+  
+  /* Style the dropdown content */
+  .dropdown-content {
+    visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s ;
+    position: absolute;
+    z-index: 1;
+
+    @include mobile(){
+        position: relative;
+    }
+  
+   
+    ul{
+        background: $white;
+        box-shadow: 0px 0px 0.78125vw rgba(191,188,188,0.160784);
+        border-radius: px2vw(15);
+        @include mobile(){
+            border-radius: px2vw(10,414);
+            background: transparent;
+            display: none;
+            box-shadow: none;
+        }
+        padding: 1vw 0;
+        li{
+
+            @include mobile(){
+                border-bottom: 0 !important;
+            }
+            padding: px2vw(8) px2vw(15);
+            a{
+                color: #5A5959 !important;
+                @include mobile(){
+                    color: $white !important;
+                    font-size: px2vw(14,414) !important;
+                }
+                &:hover{
+                    color: $blue !important;
+                }
+            }
+        }
+    }
+  }
+  
+  /* Show the dropdown content on hover */
+
+  .dropdown{
+    background: url("../img/arrow.png") no-repeat;
+    background-position: right px2vw(8);
+    background-size: px2vw(16);
+    @include mobile(){
+        background-size: px2vw(16,414);
+    }
+    &:hover{
+        background-image: url('../img/arrow-hover.png');
+        & > a{
+            color: $blue !important;
+            @include mobile(){
+                color: $blue-light !important;
+            }
+        }
+
+       
+    }
+   a{
+    padding-right: px2vw(20);
+   }
+  }
+  .dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+    padding: 1vw 0;
+        ul{
+            @include mobile(){
+                display: block !important;
+            }
+        }
+    
+  }
 
 
 section[section="banner"] {
@@ -218,43 +306,44 @@ section[section="banner"] {
             }
         }
 
-        .cta {
-
-            font-size: px2vw(20);
-            font-weight: $regular;
-            width: px2vw(229);
-            height: px2vw(70);
-            background: $blue;
-            border: 1px solid #707070;
-            border-radius: px2vw(35);
-            display: inline-block;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: $white;
-
-            @include mobile(){
-                font-size: px2vw(14,414);
-                
-                width: 35.927083vw;
-                height: 10.645833vw;
-            
-              
-                border-radius: 10.645833vw;
-            }
-
-            &:hover {
-                background: $white;
-                color: $blue;
-            }
-        }
+       
     }
 
 
 
 
 }
+.cta {
 
+    font-size: px2vw(20);
+    font-weight: $regular;
+    width: px2vw(229);
+    height: px2vw(70);
+    background: $blue;
+    border: 1px solid #707070;
+    border-radius: px2vw(35);
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $white;
+    cursor: pointer;
+
+    @include mobile(){
+        font-size: px2vw(14,414);
+        
+        width: 35.927083vw;
+        height: 10.645833vw;
+    
+      
+        border-radius: 10.645833vw;
+    }
+
+    &:hover {
+        background: $white;
+        color: $blue;
+    }
+}
 section[section="OurServices"] {
 
     background: #f9fafb;
@@ -927,4 +1016,99 @@ footer{
            
         
     }
+}
+
+//inner page
+
+
+[section="inner"]{
+    background: #f9fafb;
+    .headings{
+        margin-bottom: px2vw(20);
+    }
+    p{
+        color: #5A5959;
+        margin-bottom: px2vw(15);
+    }
+}
+.plan-grid{
+   
+}
+
+.tabs-main{
+    background: #fff;
+    .tab-content-wrapper{
+       
+    }
+}
+
+.customize{
+    background: #F3F4F6;
+    .customize-wrapper{
+        display: flex;
+
+        @include mobile(){
+            flex-direction: column;
+        }
+        .custom-msg{
+            width: 45%;
+            @include mobile(){
+                width: 100%;
+            }
+        }
+        .form-section{
+            width: 55%;
+            @include mobile(){
+                width: 100%;
+                margin-top: px2vw(25,414);
+            }
+        }
+    }
+}
+
+form{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    input, textarea{
+       box-shadow: 0px 3px 1.82291666667vw rgba(150,144,144,0.160784);
+       border: 1px solid #ced4da;
+       outline: none;
+       &:focus-visible{
+        border: none;
+        outline: none;
+       }
+        border-radius: px2vw(10);
+        padding: px2vw(8) px2vw(15);
+        margin: px2vw(10);
+        @include mobile(){
+            padding: px2vw(8,414) px2vw(15,414);
+            border-radius: px2vw(10,414);
+            margin-bottom: px2vw(10,414);
+        }
+    }
+
+    input{
+        width: 30.33%;
+
+        @include mobile(){
+            width: 100%;
+        }
+    }
+
+    textarea{
+        width: 100% ;
+    }
+
+    .cta{
+       
+        margin: px2vw(20) auto;
+        cursor: pointer;
+
+        @include mobile(){
+            margin-top: px2vw(20,414);
+        }
+    }
+
 }
