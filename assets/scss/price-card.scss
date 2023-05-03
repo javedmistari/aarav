@@ -12,6 +12,10 @@
     border-radius: px2vw(20);
     align-items: flex-start !important;
     position: relative;
+    transition: all 0.3s ease-in;
+    &:hover{
+        scale: (1.1);
+    }
     &:not(:last-child){
         margin-right: px2vw(20);
         @include mobile(){
